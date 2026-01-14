@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Windu Nicen Pradifta Reesandi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    :root {
+      --primary: #00c4cc;
+      --text: #222;
+      --bg1: #1d11fc;
+      --bg2: #b60def;
+      --white: #fff;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: linear-gradient(-45deg, var(--bg1), var(--bg2), #630cf0, #7ed6df);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding-top: 50px;
+    }
+
+    .profile-wrapper {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.07) rotate(2deg);
+    }
+
+    .lottie-header {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    header {
+      text-align: center;
+      animation: fadeInDown 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease 0.5s forwards;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 50px 0;
+      box-shadow: var(--shadow);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+
+    .section.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .section h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
+
+    a {
+      color: #006eff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff6b6b;
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      nav { gap: 15px; }
+      .section { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-wrapper">
+      <img src="ncen.jpeg" alt="Windu Nicen Pradifta Reesandi" class="profile-photo" />
+      <div class="lottie-header" id="animLogo"></div>
+    </div>
+
+    <header>
+      <h1>Windu Nicen Pradifta Reesandi</h1>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#achievements">Pencapaian</a>
+        <a href="#projects">Karya</a>
+        <a href="#socials">Sosial</a>
+      </nav>
+    </header>
+
+    <section id="about" class="section reveal">
+      <h2>📌 Tentang Saya</h2>
+      <p>
+        Saya adalah siswa SMA yang selalu bersemangat dan ceria dalam menjalani hari-hari. Dengan sikap positif dan senyum yang mudah terpancar, saya senang berinteraksi dengan teman-teman dan aktif mengajak teman\guru berbicara. Semangat belajar dan rasa ingin tahu yang tinggi membuat saya terus berkembang, sambil tetap menjaga keceriaan dan kebahagiaan dalam setiap langkah.
+      </p>
+    </section>
+
+    <!-- 📚 Riwayat Pendidikan -->
+    <section id="education" class="section reveal">
+      <h2>📚 Riwayat Pendidikan</h2>
+      <ul>
+        <li><strong>SD</strong> – SD Negeri (nama sekolahmu) (2013 – 2019)</li>
+        <li><strong>SMP</strong> – SMP Negeri (nama sekolahmu) (2019 – 2022)</li>
+        <li><strong>SMA</strong> – SMA Negeri (nama sekolahmu) (2022 – sekarang)</li>
+      </ul>
+    </section>
+
+    <section id="achievements" class="section reveal">
+      <h2>🏆 Pencapaian</h2>
+      <ul>
+        <li>Juara 3 lomba senam</li>
+        <li>Juara 2 lomba antar house H.O.S Tjokroaminoto 2023</li>
+        <li>Juara 1 lomba antar house Apatosaurus</li>
+        <li>Nilai bahasa 98 wawancara jaranan</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <h2>🧪 Karya</h2>
+      <ul>
+        <li><a href="https://drive.google.com/drive/folders/1qvM_mYK0RuJ7bzAG-tUsnnVBgp44J-K5" target="_blank" rel="noopener noreferrer">GDrive – Karya SMA</a></li>
+      </ul>
+    </section>
+
+    <section id="socials" class="section reveal">
+      <h2>🌐 Sosial Media</h2>
+      <p>
+        📸 <a href="https://www.instagram.com/ncenn122?igsh=MXFjejB2YjNmaDN1Nw==" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2025 Windu Nicen. Dibuat dengan semangat, animasi, dan cinta akan desain.
+    </footer>
+  </div>
+
+  <script>
+    // Lottie
+    const anim = lottie.loadAnimation({
+      container: document.getElementById('animLogo'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets9.lottiefiles.com/packages/lf20_x62chJ.json'
+    });
+    document.getElementById('animLogo').addEventListener('click', () => {
+      anim.playSegments([0, 60], true);
+    });
+
+    // Scroll animation reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(r => observer.observe(r));
+  </script>
+
+  <a href="https://www.instagram.com/ncenn122?igsh=MXFjejB2YjNmaDN1Nw=="></a>
+</body>
+</html>
